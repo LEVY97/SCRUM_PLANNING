@@ -1350,7 +1350,3 @@ SELECT COUNT(*) AS TotalUSP FROM sys.procedures
 WHERE name LIKE 'USP[_]%' AND schema_id IN (SCHEMA_ID('SQM_SECURITY'), SCHEMA_ID('SQM_CATALOGS'), SCHEMA_ID('SQM_GENERAL'));
 EXEC [SQM_CATALOGS].[USP_Status] @Accion='LISTAR', @Pagina=1, @TamanoPagina=10;
 EXEC [SQM_SECURITY].[USP_Roles] @Accion='LISTAR', @Pagina=1, @TamanoPagina=10;
--- Ejemplo de insercion (descomentar solo si deseas crear un registro):
--- EXEC [SQM_CATALOGS].[USP_Status] @Accion='INSERTAR', @statusName='Pendiente', @statusCreatorId=1, @statusEnable=1;
--- Ejemplo de actualizacion (usar ID existente y datos validos):
--- EXEC [SQM_CATALOGS].[USP_Status] @Accion='ACTUALIZAR', @statusId=1, @statusName='En progreso', @statusEnable=1;
